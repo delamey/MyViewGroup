@@ -111,7 +111,7 @@ public class SwipeCards extends ViewGroup {
         int finalLeft = mCenterX - releasedChild.getWidth() / 2;
         int indexOfChild = indexOfChild(releasedChild);
         int finalTop = mCenterY - releasedChild.getHeight() / 2 + mCardGap * (getChildCount() - indexOfChild);
-        mViewDragHelper.smoothSlideViewTo(releasedChild, finalLeft, finalTop);
+        mViewDragHelper.smoothSlideViewTo(releasedChild, finalLeft, finalTop);//平滑滚动
         invalidate();
     }
 
@@ -128,4 +128,5 @@ public class SwipeCards extends ViewGroup {
         mViewDragHelper.smoothSlideViewTo(releasedChild, finalLeft, finalTop);
         invalidate();
     }
+
 }
